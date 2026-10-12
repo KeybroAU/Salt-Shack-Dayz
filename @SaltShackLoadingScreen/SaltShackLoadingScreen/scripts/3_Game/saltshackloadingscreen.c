@@ -13,6 +13,20 @@ class SaltShackLoadingScreenPaths
 		background.LoadImageFile(0, BACKGROUND);
 		background.SetMaskProgress(1.0);
 	}
+
+	static void HideCover(Widget root, string widgetName)
+	{
+		Widget covered;
+
+		if (!root)
+			return;
+
+		covered = root.FindAnyWidget(widgetName);
+		if (!covered)
+			return;
+
+		covered.Show(false);
+	}
 };
 
 modded class LoadingScreen
@@ -123,13 +137,22 @@ modded class LoadingScreen
 		m_ImageLogoMid.Show(false);
 		m_ImageLogoCorner.Show(false);
 		m_ModdedWarning.Show(false);
+		m_TextWidgetTitle.Show(false);
+		m_TextWidgetStatus.Show(false);
 		m_ProgressLoading.SetColor(0xFFE6E2D6);
 		ProgressAsync.SetProgressData(m_ProgressLoading);
 		ProgressAsync.SetUserData(m_ImageBackground);
 	}
 
+	override void ShowEx(DayZGame game)
+	{
+		Show();
+	}
+
 	override void Show()
 	{
+		Widget hintFrame;
+
 		super.Show();
 
 		SaltShackLoadingScreenPaths.PaintBackground(m_ImageWidgetBackground);
@@ -148,6 +171,19 @@ modded class LoadingScreen
 
 		if (m_ModdedWarning)
 			m_ModdedWarning.Show(false);
+
+		if (m_TextWidgetTitle)
+			m_TextWidgetTitle.Show(false);
+
+		if (m_TextWidgetStatus)
+			m_TextWidgetStatus.Show(false);
+
+		if (m_WidgetRoot)
+		{
+			hintFrame = m_WidgetRoot.FindAnyWidget("hint_frame");
+			if (hintFrame)
+				hintFrame.Show(false);
+		}
 
 		if (m_ProgressLoading)
 			m_ProgressLoading.SetColor(0xFFE6E2D6);
@@ -169,6 +205,12 @@ modded class LoginTimeBase
 			return;
 
 		SaltShackLoadingScreenPaths.PaintBackground(background);
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "BottomPanel");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hint_frame0");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hint_frame");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "LinesImageLeft");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "LinesRightImage");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hintIcon");
 	}
 };
 
@@ -187,5 +229,11 @@ modded class LoginQueueBase
 			return;
 
 		SaltShackLoadingScreenPaths.PaintBackground(background);
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "BottomPanel");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hint_frame0");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hint_frame");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "LinesImageLeft");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "LinesRightImage");
+		SaltShackLoadingScreenPaths.HideCover(layoutRoot, "hintIcon");
 	}
 };

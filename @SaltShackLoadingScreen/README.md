@@ -1,6 +1,6 @@
 # Salt Shack Loading Screen
 
-Client mod that replaces the scripted DayZ loading screen, the login queue background, and the login timer background with an original Salt Shack scene. The title is drawn on the image, and the vanilla logo widgets are hidden.
+Client mod that replaces the scripted DayZ loading screen, the login queue background, and the login timer background with the Salt Shack artwork. The title, tagline, rules, and "LOADING..." are part of that image. The layout does not draw them again. Vanilla logo widgets stay hidden.
 
 The engine splash that appears before scripts start is unchanged. The mission file `load.paa` (a file sitting in the mission folder) is also a separate splash and is not part of this mod.
 
@@ -31,7 +31,7 @@ Put `SaltShack.bikey` in `@SaltShackLoadingScreen\Keys\` and in the server `keys
 | `Addons/SaltShackLoadingScreen.pbo` | Packed addon. `config.cpp` inside is not binarized. |
 | `SaltShackLoadingScreen/` | Source. `$PBOPREFIX$` is `SaltShackLoadingScreen`. |
 
-`data/salt_shack_loading.png` and `data/mod_logo.png` are the editable artwork. The game reads the `.paa` files.
+`data/salt_shack_loading.png` is the loading artwork, packed as `data/salt_shack_loading.paa`. The same texture is the login queue and login timer background. `data/mod_logo.png` is only the launcher icon. The game reads the `.paa` files.
 
 ## Pack it again
 

@@ -1,0 +1,199 @@
+FrameWidgetClass LoadingFrame {
+ position 0 0
+ size 1 1
+ halign center_ref
+ valign center_ref
+ hexactpos 0
+ vexactpos 0
+ hexactsize 0
+ vexactsize 0
+ priority 1000
+ {
+  PanelWidgetClass PanelWidget1 {
+   clipchildren 0
+   color 0.027 0.063 0.094 1
+   position 0 0
+   size 1 1
+   halign center_ref
+   valign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 0
+   vexactsize 0
+   {
+    ImageWidgetClass ImageBackground {
+     visible 1
+     ignorepointer 1
+     position 0 0
+     size 1 1
+     halign center_ref
+     valign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     imageTexture "SaltShackLoadingScreen/data/salt_shack_loading.paa"
+     mode blend
+     "src alpha" 0
+     "clamp mode" clamp
+     "stretch mode" stretch_w_h
+    }
+    TextWidgetClass SaltShackTitle {
+     ignorepointer 1
+     position 0 0.30
+     size 0.8 0.08
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text "SALT SHACK"
+     font "gui/fonts/sdf_MetronBook72"
+     "exact text" 1
+     "exact text size" 56
+     "text halign" center
+     "text valign" center
+     color 0.925 0.910 0.863 1
+    }
+    TextWidgetClass TextWidget {
+     visible 0
+     position 0 0.40
+     size 0.74 0.05
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text ""
+     "exact text" 1
+     "text halign" center
+     "text valign" center
+     color 0.925 0.910 0.863 1
+    }
+    TextWidgetClass StatusText {
+     position 0 0.62
+     size 0.74 0.04
+     halign center_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 20
+     "text halign" center
+     "text valign" center
+     color 0.902 0.886 0.839 1
+    }
+    ImageWidgetClass ImageLogoMid {
+     visible 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    ImageWidgetClass ImageLogoCorner {
+     visible 0
+     position 0 0
+     size 1 1
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    ImageWidgetClass ImageLoadingIcon {
+     visible 0
+     position 0 0
+     size 64 64
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+    }
+    TextWidgetClass ProgressText {
+     visible 0
+     ignorepointer 1
+     position 0 0
+     size 100 30
+     halign center_ref
+     valign center_ref
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "text halign" center
+    }
+    MultilineTextWidgetClass ModdedWarning {
+     visible 0
+     position 0 0
+     size 444 30
+     hexactpos 1
+     vexactpos 1
+     hexactsize 1
+     vexactsize 1
+     text ""
+     font "gui/fonts/sdf_MetronLight24"
+     "exact text" 1
+     "exact text size" 18
+    }
+    PanelWidgetClass BottomPanel {
+     clipchildren 0
+     ignorepointer 1
+     color 0.02 0.04 0.05 0.72
+     position 0 0
+     size 1 0.20
+     halign center_ref
+     valign bottom_ref
+     hexactpos 0
+     vexactpos 0
+     hexactsize 0
+     vexactsize 0
+     {
+      ProgressBarWidgetClass LoadingBar {
+       ignorepointer 1
+       position 0 0.28
+       size 640 4
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 1
+       vexactsize 1
+       style Loading
+       color 0.902 0.886 0.839 1
+       current 0
+       vertical 0
+      }
+      FrameWidgetClass hint_frame {
+       visible 1
+       clipchildren 0
+       ignorepointer 1
+       position 0 0.42
+       size 0.8 0.45
+       halign center_ref
+       hexactpos 0
+       vexactpos 0
+       hexactsize 0
+       vexactsize 0
+      }
+     }
+    }
+   }
+  }
+  WrapSpacerWidgetClass notification_root {
+   visible 0
+   ignorepointer 1
+   position 0 0
+   size 900 30
+   halign center_ref
+   hexactpos 0
+   vexactpos 0
+   hexactsize 1
+   vexactsize 1
+  }
+ }
+}

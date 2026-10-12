@@ -1,0 +1,10 @@
+name = "Salt Shack Loading Screen";
+picture = "SaltShackLoadingScreen\data\mod_logo.paa";
+logo = "SaltShackLoadingScreen\data\mod_logo.paa";
+logoOver = "SaltShackLoadingScreen\data\mod_logo.paa";
+logoSmall = "SaltShackLoadingScreen\data\mod_logo.paa";
+tooltip = "Salt Shack loading screen";
+overview = "Replaces the scripted loading screen, login queue, and login timer background.";
+action = "";
+author = "Salt Shack";
+version = "1.0";

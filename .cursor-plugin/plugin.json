@@ -1,0 +1,18 @@
+{
+  "name": "dayz-modding",
+  "version": "1.0.0",
+  "description": "Complete DayZ mod development skill covering Enforce Script language, 30+ gotchas, engine API patterns, mod architecture, performance optimization, and professional UI patterns from COT, VPP, and Expansion mods",
+  "author": {
+    "name": "StarDZ Team",
+    "email": "stardz@proton.me"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dayz",
+    "enforce-script",
+    "modding",
+    "enfusion",
+    "bohemia"
+  ],
+  "skills": ["./skills/dayz-modding"]
+}
